@@ -31,3 +31,33 @@ great = a>b && a>c? great = a: great<b && b>c? great =b : great = c;
 console.log("great", great)
 
 /**************************Loops****************************/
+for(let a = 1; a<=10; a++){
+    console.log(a);
+}
+
+let obj = {
+    name:"Mudit",
+    role:"Ptogrammer",
+    company:"Bishop"
+};
+
+for(const key in obj){
+    console.log(key);
+}
+
+for(const c of "Mudit"){
+    console.log(c);
+}
+
+let g = 1;
+do{    
+    console.log(g ,'Hi');
+    g++
+}
+while(g<5)
+
+
+while(g<10){
+    console.log(g);
+    g++;
+}
