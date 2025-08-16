@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Complete JS Table & List Reference</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .container{
+        margin: 0 auto;
+        width: fit-content;
+
+        border: 2px solid black;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        }
+
+        th {
+        background-color: lightgray;
+        }
+
+        ul, ol {
+        margin: 10px 0;
+        padding-left: 20px;
+        }
+
+        dl dt {
+        font-weight: bold;
+        }
+
+        dl dd {
+        margin-left: 20px;
         }
     </style>
 </head>
+
 <body>
-    <table border="2">
+<div class="container">
+    <h2>Table Example</h2>
+    <table>
+        <caption>Product Prices</caption>
+
+        <colgroup>
+            <col style="background-color:#7bff60">
+            <col style="background-color: #60cdff;">
+        </colgroup>
+
         <thead>
             <tr>
-            <th>Item</th>
-            <th>Price</th>
+                <th>Item</th>
+                <th>Price</th>
             </tr>
         </thead>
-        
+
         <tbody>
             <tr>
-            <td>Apple</td>
-            <td>$1</td>
+                <td>Apple</td>
+                <td>$1</td>
             </tr>
+        
             <tr>
-            <td>Orange</td>
-            <td>$2</td>
+                <td>Banana</td>
+                <td>$0.5</td>
             </tr>
         </tbody>
 
         <tfoot>
             <tr>
-            <td>Total</td>
-            <td>$3</td>
+                <td>Total</td>
+                <td>$1.5</td>
             </tr>
         </tfoot>
-</table>
+    </table>
+
+    <h2>Unordered List Example</h2>
+    <ul id="myUL">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+
+    <h2>Ordered List Example</h2> 
+    <ol id="myOL">
+        <li>Step 1</li>
+        <li>Step 2</li>
+    </ol>
+
+    <h2>Description List Example</h2>
+    <dl id="myDL">
+        <dt>JavaScript</dt><dd>Programming language for web development</dd>
+        <dt>DOM</dt><dd>Document Object Model</dd>
+    </dl>
+</div>
+    <script src="/07TableOps.js"></script>
 </body>
 </html>
