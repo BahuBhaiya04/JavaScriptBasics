@@ -17,7 +17,8 @@ console.log(target.outerHTML);//Gives HTML of target including element itself
 /* <div class="container">
     <div class="box">I am a box</div>
     <div class="box">I am a box</div>
-    </div> */
+    </div> 
+*/
 
 console.log(target.tagName);
 //Output
@@ -30,16 +31,16 @@ console.log(target.textContent);
 // gives all the text content inside the Element
 
 // Hiding elements 
-console.log(target.hidden);//checks
-target.hidden = true; //hides whole targeted element
+console.log(target.hidden);    //checks
+target.hidden = true;          //hides whole targeted element
 console.log(target.hidden);
-target.hidden = false; //revert back targeted element
+target.hidden = false;         //revert back targeted element
 
 //alternative
 target.style.display = "none";   // hide
 target.style.display = "block";  // show (or "inline"/"flex" depending on your layout)
 
-target.innerHTML = 'This is new html';//Changes HTML\
+target.innerHTML = 'This is new html';    //Changes HTML\
 
 // console.log(target.hasAttribute('style')); //returns boolean
 // console.log(target.setAttribute());
@@ -49,13 +50,14 @@ target.innerHTML = 'This is new html';//Changes HTML\
 
 document.designMode = 'on';
 console.log(target);
-target.setAttribute('data-nameOfData', 'this is data log'); //Created an attribute
+target.setAttribute('data-nameOfData', 'this is data log');     //Created an attribute
 
-console.log(target.dataset);//Returns 'data-' logs of target
+console.log(target.dataset);                                    //Returns 'data-' logs of target
 
 // Element Creation 
-let NewDiv = document.createElement('div'); //Creation
-target.append(NewDiv); //Insertion in target
+let NewDiv = document.createElement('div');     //Creation
+target.append(NewDiv);                          //Insertion in target
+
 /*
 ===================Insertion Methods=================
 .append();      --|  Inside placement nodes
@@ -64,7 +66,7 @@ target.append(NewDiv); //Insertion in target
 .before();      --|  Outside placement nodes
 .after();       --|
 
-.replacewith(); --| Replacement node
+.replacewith(); --|  Replacement node
 */
 
 NewDiv.innerHTML = "<h1> this adds html writtewn in innerHTML as it is</h1>";
@@ -73,9 +75,9 @@ target.insertAdjacentHTML('beforebegin', '<h3>Adjecent HTML</h3>');//.insertAdja
 
 
 
-const h1 = document.createElement('h2');//Element creation
-h1.textContent = 'Adjacent Element'; //Content addition
-target.insertAdjacentElement('afterend', h1);//Insertion
+const h1 = document.createElement('h2');         //Element creation
+h1.textContent = 'Adjacent Element';             //Content addition
+target.insertAdjacentElement('afterend', h1);    //Insertion
 document.querySelector('h3').setAttribute('style', 'background-color: blue; margin: 0;')
 
 /*
@@ -89,4 +91,3 @@ target.classList.add('new-class');
 target.classList.remove('container');
 target.classList.toggle('container');
 console.log(target.className)
-
